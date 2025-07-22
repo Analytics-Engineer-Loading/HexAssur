@@ -1,0 +1,766 @@
+[0m23:23:18.503158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055100d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10637e640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10637e460>]}
+
+
+============================== 23:23:18.514006 | f358d6a4-5b70-46ea-841c-b40d92fe6ba8 ==============================
+[0m23:23:18.514006 [info ] [MainThread]: Running with dbt=1.9.8
+[0m23:23:18.515265 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/jean-baptistepinet/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:23:18.552958 [info ] [MainThread]: dbt version: 1.9.8
+[0m23:23:18.553687 [info ] [MainThread]: python version: 3.9.6
+[0m23:23:18.554180 [info ] [MainThread]: python path: /Library/Developer/CommandLineTools/usr/bin/python3
+[0m23:23:18.554626 [info ] [MainThread]: os info: macOS-12.7.4-x86_64-i386-64bit
+[0m23:23:40.225865 [info ] [MainThread]: Using profiles dir at /Users/jean-baptistepinet/.dbt
+[0m23:23:40.226530 [info ] [MainThread]: Using profiles.yml file at /Users/jean-baptistepinet/.dbt/profiles.yml
+[0m23:23:40.226982 [info ] [MainThread]: Using dbt_project.yml file at /Users/jean-baptistepinet/Documents/Portfolio/HexAssur/dbt/dbt_project.yml
+[0m23:23:40.227401 [info ] [MainThread]: adapter type: bigquery
+[0m23:23:40.227786 [info ] [MainThread]: adapter version: 1.9.2
+[0m23:23:40.375573 [info ] [MainThread]: Configuration:
+[0m23:23:40.376136 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:23:40.376539 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:23:40.376923 [info ] [MainThread]: Required dependencies:
+[0m23:23:40.377406 [debug] [MainThread]: Executing "git --help"
+[0m23:23:40.411980 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:23:40.414652 [debug] [MainThread]: STDERR: "b''"
+[0m23:23:40.415534 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:23:40.416090 [info ] [MainThread]: Connection:
+[0m23:23:40.416951 [info ] [MainThread]:   method: service-account
+[0m23:23:40.417354 [info ] [MainThread]:   database: hexassur
+[0m23:23:40.417731 [info ] [MainThread]:   execution_project: hexassur
+[0m23:23:40.418098 [info ] [MainThread]:   schema: dbt
+[0m23:23:40.418465 [info ] [MainThread]:   location: EU
+[0m23:23:40.418829 [info ] [MainThread]:   priority: interactive
+[0m23:23:40.419197 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m23:23:40.419565 [info ] [MainThread]:   impersonate_service_account: None
+[0m23:23:40.419933 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m23:23:40.420298 [info ] [MainThread]:   job_retries: 1
+[0m23:23:40.421065 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m23:23:40.422094 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m23:23:40.422564 [info ] [MainThread]:   timeout_seconds: 300
+[0m23:23:40.424212 [info ] [MainThread]:   client_id: None
+[0m23:23:40.425526 [info ] [MainThread]:   token_uri: None
+[0m23:23:40.426237 [info ] [MainThread]:   compute_region: None
+[0m23:23:40.426746 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m23:23:40.427139 [info ] [MainThread]:   gcs_bucket: None
+[0m23:23:40.427517 [info ] [MainThread]:   dataproc_batch: None
+[0m23:23:40.428603 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m23:23:40.873828 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m23:23:40.874891 [debug] [MainThread]: On debug: select 1 as id
+[0m23:23:40.875680 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:23:40.876539 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 2] No such file or directory: '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/hexassur-4ea302855c88.json''
+[0m23:23:40.877188 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m23:23:40.877760 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 2] No such file or directory: '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/hexassur-4ea302855c88.json'
+[0m23:23:40.878630 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:23:40.879366 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:23:40.879954 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:23:40.905834 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 22.543873, "process_in_blocks": "0", "process_kernel_time": 1.910913, "process_mem_max_rss": "324542464", "process_out_blocks": "0", "process_user_time": 6.524784}
+[0m23:23:40.906547 [debug] [MainThread]: Command `dbt debug` failed at 23:23:40.906391 after 22.54 seconds
+[0m23:23:40.907094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055100d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f2a3610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11f2a37c0>]}
+[0m23:23:40.907643 [debug] [MainThread]: Flushing usage events
+[0m23:23:41.856310 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:24:15.172215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e03b0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eea8460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eea8280>]}
+
+
+============================== 23:24:15.182177 | 88b9614e-8155-498e-b010-e3db4172ced0 ==============================
+[0m23:24:15.182177 [info ] [MainThread]: Running with dbt=1.9.8
+[0m23:24:15.183550 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/jean-baptistepinet/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:24:15.217214 [info ] [MainThread]: dbt version: 1.9.8
+[0m23:24:15.218185 [info ] [MainThread]: python version: 3.9.6
+[0m23:24:15.218730 [info ] [MainThread]: python path: /Library/Developer/CommandLineTools/usr/bin/python3
+[0m23:24:15.219177 [info ] [MainThread]: os info: macOS-12.7.4-x86_64-i386-64bit
+[0m23:24:19.208835 [info ] [MainThread]: Using profiles dir at /Users/jean-baptistepinet/.dbt
+[0m23:24:19.209450 [info ] [MainThread]: Using profiles.yml file at /Users/jean-baptistepinet/.dbt/profiles.yml
+[0m23:24:19.209865 [info ] [MainThread]: Using dbt_project.yml file at /Users/jean-baptistepinet/Documents/Portfolio/HexAssur/dbt/dbt_project.yml
+[0m23:24:19.210319 [info ] [MainThread]: adapter type: bigquery
+[0m23:24:19.210697 [info ] [MainThread]: adapter version: 1.9.2
+[0m23:24:19.360490 [info ] [MainThread]: Configuration:
+[0m23:24:19.361126 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:24:19.361558 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m23:24:19.361952 [info ] [MainThread]: Required dependencies:
+[0m23:24:19.362481 [debug] [MainThread]: Executing "git --help"
+[0m23:24:19.399875 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:24:19.402240 [debug] [MainThread]: STDERR: "b''"
+[0m23:24:19.403247 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:24:19.403924 [info ] [MainThread]: Connection:
+[0m23:24:19.404804 [info ] [MainThread]:   method: service-account
+[0m23:24:19.405203 [info ] [MainThread]:   database: hexassur
+[0m23:24:19.405580 [info ] [MainThread]:   execution_project: hexassur
+[0m23:24:19.405948 [info ] [MainThread]:   schema: dbt
+[0m23:24:19.406315 [info ] [MainThread]:   location: EU
+[0m23:24:19.406686 [info ] [MainThread]:   priority: interactive
+[0m23:24:19.407061 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m23:24:19.407429 [info ] [MainThread]:   impersonate_service_account: None
+[0m23:24:19.407799 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m23:24:19.408165 [info ] [MainThread]:   job_retries: 1
+[0m23:24:19.408535 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m23:24:19.408904 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m23:24:19.409274 [info ] [MainThread]:   timeout_seconds: 300
+[0m23:24:19.409645 [info ] [MainThread]:   client_id: None
+[0m23:24:19.410013 [info ] [MainThread]:   token_uri: None
+[0m23:24:19.410379 [info ] [MainThread]:   compute_region: None
+[0m23:24:19.410748 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m23:24:19.411115 [info ] [MainThread]:   gcs_bucket: None
+[0m23:24:19.411480 [info ] [MainThread]:   dataproc_batch: None
+[0m23:24:19.412521 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m23:24:19.798454 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m23:24:19.800031 [debug] [MainThread]: On debug: select 1 as id
+[0m23:24:19.800734 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:24:19.801358 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 2] No such file or directory: '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/hexassur-4ea302855c88.json''
+[0m23:24:19.801878 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m23:24:19.802318 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 2] No such file or directory: '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/hexassur-4ea302855c88.json'
+[0m23:24:19.802819 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m23:24:19.803462 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:24:19.803966 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m23:24:19.805746 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.738089, "process_in_blocks": "0", "process_kernel_time": 1.083673, "process_mem_max_rss": "324558848", "process_out_blocks": "0", "process_user_time": 5.759466}
+[0m23:24:19.806537 [debug] [MainThread]: Command `dbt debug` failed at 23:24:19.806365 after 4.74 seconds
+[0m23:24:19.807171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e03b0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127dd8ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127dd82e0>]}
+[0m23:24:19.807768 [debug] [MainThread]: Flushing usage events
+[0m23:24:20.791549 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:31:08.445324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff048132d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff04816fb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff048131cd0>]}
+
+
+============================== 21:31:08.466449 | e5101f48-afb7-4f47-9829-a63591e52d72 ==============================
+[0m21:31:08.466449 [info ] [MainThread]: Running with dbt=1.7.19
+[0m21:31:08.468136 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m21:31:08.469287 [info ] [MainThread]: dbt version: 1.7.19
+[0m21:31:08.470179 [info ] [MainThread]: python version: 3.11.8
+[0m21:31:08.471040 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m21:31:08.471921 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-x86_64-with-glibc2.36
+[0m21:31:08.473423 [info ] [MainThread]: Using profiles dir at /home/airflow/.dbt
+[0m21:31:08.474903 [info ] [MainThread]: Using profiles.yml file at /home/airflow/.dbt/profiles.yml
+[0m21:31:08.476449 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m21:31:08.569270 [info ] [MainThread]: Configuration:
+[0m21:31:08.570548 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m21:31:08.571801 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:31:08.573119 [info ] [MainThread]: Required dependencies:
+[0m21:31:08.574440 [debug] [MainThread]: Executing "git --help"
+[0m21:31:08.576668 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:31:08.577840 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m21:31:08.579521 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m21:31:08.580846 [info ] [MainThread]: dbt looked for a profiles.yml file in /home/airflow/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:31:08.582283 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m21:31:08.587502 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.28301156, "process_user_time": 3.636274, "process_kernel_time": 0.551582, "process_mem_max_rss": "106664", "process_in_blocks": "128432", "process_out_blocks": "2437", "command_success": false}
+[0m21:31:08.589318 [debug] [MainThread]: Command `dbt debug` failed at 21:31:08.588978 after 0.29 seconds
+[0m21:31:08.590305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff048171910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff048121c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff048123490>]}
+[0m21:31:08.591630 [debug] [MainThread]: Flushing usage events
+[0m21:37:52.462411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc9554c6810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc9554b9510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc9554b8490>]}
+
+
+============================== 21:37:52.476146 | fc018e02-570e-4524-9528-799c0b4d1e13 ==============================
+[0m21:37:52.476146 [info ] [MainThread]: Running with dbt=1.7.19
+[0m21:37:52.478028 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt/logs', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:37:52.479186 [info ] [MainThread]: dbt version: 1.7.19
+[0m21:37:52.480217 [info ] [MainThread]: python version: 3.11.8
+[0m21:37:52.481802 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m21:37:52.482950 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-x86_64-with-glibc2.36
+[0m21:37:58.235369 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt/.dbt_profiles/
+[0m21:37:58.247005 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/.dbt_profiles/profiles.yml
+[0m21:37:58.248092 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m21:37:58.497573 [info ] [MainThread]: Configuration:
+[0m21:37:58.498888 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m21:37:58.500225 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:37:58.501617 [info ] [MainThread]: Required dependencies:
+[0m21:37:58.502799 [debug] [MainThread]: Executing "git --help"
+[0m21:37:58.799157 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:37:58.801435 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m21:37:58.803516 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m21:37:58.805914 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "hexassur", target "dev" invalid: '300' is not valid under any of the given schemas
+
+
+[0m21:37:58.808337 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m21:37:58.822438 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 6.4611826, "process_user_time": 5.327741, "process_kernel_time": 1.441637, "process_mem_max_rss": "180720", "process_in_blocks": "343648", "process_out_blocks": "5733", "command_success": false}
+[0m21:37:58.824848 [debug] [MainThread]: Command `dbt debug` failed at 21:37:58.824512 after 6.46 seconds
+[0m21:37:58.825832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc955495210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc955496d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc955496210>]}
+[0m21:37:58.826784 [debug] [MainThread]: Flushing usage events
+[0m21:41:00.940502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93c6b496d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93c83c3550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93c6b16bd0>]}
+
+
+============================== 21:41:00.959236 | 07cee8e6-8db0-4d42-b187-ef6e9818bafb ==============================
+[0m21:41:00.959236 [info ] [MainThread]: Running with dbt=1.7.19
+[0m21:41:00.960697 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'log_path': '/opt/airflow/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:41:00.962033 [info ] [MainThread]: dbt version: 1.7.19
+[0m21:41:00.963412 [info ] [MainThread]: python version: 3.11.8
+[0m21:41:00.964696 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m21:41:00.966089 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-x86_64-with-glibc2.36
+[0m21:41:03.894024 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt/.dbt_profiles/
+[0m21:41:03.895956 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/.dbt_profiles/profiles.yml
+[0m21:41:03.897024 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m21:41:03.898795 [info ] [MainThread]: adapter type: bigquery
+[0m21:41:03.899867 [info ] [MainThread]: adapter version: 1.7.5
+[0m21:41:04.084828 [info ] [MainThread]: Configuration:
+[0m21:41:04.086347 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:41:04.087929 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:41:04.089747 [info ] [MainThread]: Required dependencies:
+[0m21:41:04.091900 [debug] [MainThread]: Executing "git --help"
+[0m21:41:04.223044 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:41:04.227277 [info ] [MainThread]: Connection:
+[0m21:41:04.228495 [info ] [MainThread]:   method: service-account
+[0m21:41:04.231479 [info ] [MainThread]:   database: hexassur
+[0m21:41:04.232595 [info ] [MainThread]:   execution_project: hexassur
+[0m21:41:04.233802 [info ] [MainThread]:   schema: dbt
+[0m21:41:04.235223 [info ] [MainThread]:   location: EU
+[0m21:41:04.236463 [info ] [MainThread]:   priority: interactive
+[0m21:41:04.238591 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m21:41:04.240588 [info ] [MainThread]:   impersonate_service_account: None
+[0m21:41:04.242250 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m21:41:04.243503 [info ] [MainThread]:   job_retries: 1
+[0m21:41:04.244906 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m21:41:04.246049 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m21:41:04.247216 [info ] [MainThread]:   keyfile: hexassur-4ea302855c88.json
+[0m21:41:04.248689 [info ] [MainThread]:   timeout_seconds: 300
+[0m21:41:04.250240 [info ] [MainThread]:   client_id: None
+[0m21:41:04.251887 [info ] [MainThread]:   token_uri: None
+[0m21:41:04.253303 [info ] [MainThread]:   dataproc_region: None
+[0m21:41:04.254744 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m21:41:04.256561 [info ] [MainThread]:   gcs_bucket: None
+[0m21:41:04.257847 [info ] [MainThread]:   dataproc_batch: None
+[0m21:41:04.262787 [info ] [MainThread]: Registered adapter: bigquery=1.7.5
+[0m21:41:04.278678 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m21:41:04.279941 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:41:04.281439 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: 'hexassur-4ea302855c88.json''
+[0m21:41:04.282749 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:41:04.284458 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m21:41:04.285997 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m21:41:04.287375 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: 'hexassur-4ea302855c88.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:41:04.302476 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 3.4398172, "process_user_time": 4.479521, "process_kernel_time": 1.138192, "process_mem_max_rss": "192504", "process_in_blocks": "314232", "process_out_blocks": "9", "command_success": false}
+[0m21:41:04.305979 [debug] [MainThread]: Command `dbt debug` failed at 21:41:04.305571 after 3.45 seconds
+[0m21:41:04.307164 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:41:04.308317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93c6b6fcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93c6b6fc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93c6b6fed0>]}
+[0m21:41:04.320599 [debug] [MainThread]: Flushing usage events
+[0m21:41:44.302322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5d56c3d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5d69c9350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5d60d98d0>]}
+
+
+============================== 21:41:44.313079 | 663e0372-63ee-450a-81fa-33d30b6c6ea9 ==============================
+[0m21:41:44.313079 [info ] [MainThread]: Running with dbt=1.7.19
+[0m21:41:44.314763 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'debug': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:41:44.316743 [info ] [MainThread]: dbt version: 1.7.19
+[0m21:41:44.318061 [info ] [MainThread]: python version: 3.11.8
+[0m21:41:44.319594 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m21:41:44.321155 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-x86_64-with-glibc2.36
+[0m21:41:47.805165 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt/.dbt_profiles/
+[0m21:41:47.829112 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/.dbt_profiles/profiles.yml
+[0m21:41:47.831548 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m21:41:47.844262 [info ] [MainThread]: adapter type: bigquery
+[0m21:41:47.846309 [info ] [MainThread]: adapter version: 1.7.5
+[0m21:41:48.100746 [info ] [MainThread]: Configuration:
+[0m21:41:48.101944 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:41:48.103397 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:41:48.104538 [info ] [MainThread]: Required dependencies:
+[0m21:41:48.105912 [debug] [MainThread]: Executing "git --help"
+[0m21:41:48.117033 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:41:48.118654 [info ] [MainThread]: Connection:
+[0m21:41:48.120514 [info ] [MainThread]:   method: service-account
+[0m21:41:48.121681 [info ] [MainThread]:   database: hexassur
+[0m21:41:48.123433 [info ] [MainThread]:   execution_project: hexassur
+[0m21:41:48.124927 [info ] [MainThread]:   schema: dbt
+[0m21:41:48.126196 [info ] [MainThread]:   location: EU
+[0m21:41:48.127748 [info ] [MainThread]:   priority: interactive
+[0m21:41:48.128639 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m21:41:48.129508 [info ] [MainThread]:   impersonate_service_account: None
+[0m21:41:48.130948 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m21:41:48.131943 [info ] [MainThread]:   job_retries: 1
+[0m21:41:48.133146 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m21:41:48.134700 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m21:41:48.135627 [info ] [MainThread]:   keyfile: ./hexassur-4ea302855c88.json
+[0m21:41:48.136652 [info ] [MainThread]:   timeout_seconds: 300
+[0m21:41:48.137957 [info ] [MainThread]:   client_id: None
+[0m21:41:48.139433 [info ] [MainThread]:   token_uri: None
+[0m21:41:48.140596 [info ] [MainThread]:   dataproc_region: None
+[0m21:41:48.141655 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m21:41:48.142835 [info ] [MainThread]:   gcs_bucket: None
+[0m21:41:48.144087 [info ] [MainThread]:   dataproc_batch: None
+[0m21:41:48.145733 [info ] [MainThread]: Registered adapter: bigquery=1.7.5
+[0m21:41:48.149919 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m21:41:48.151201 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:41:48.152753 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: './hexassur-4ea302855c88.json''
+[0m21:41:48.154164 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:41:48.155465 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m21:41:48.157564 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m21:41:48.158709 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: './hexassur-4ea302855c88.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:41:48.161601 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 3.930937, "process_user_time": 4.455287, "process_kernel_time": 1.04461, "process_mem_max_rss": "183636", "process_in_blocks": "329568", "process_out_blocks": "9", "command_success": false}
+[0m21:41:48.163240 [debug] [MainThread]: Command `dbt debug` failed at 21:41:48.163043 after 3.93 seconds
+[0m21:41:48.164258 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:41:48.165068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5d56e6ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5d56fce50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5d9efbe90>]}
+[0m21:41:48.166098 [debug] [MainThread]: Flushing usage events
+[0m22:51:43.616238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bf0100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112a5efd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112a5e760>]}
+
+
+============================== 22:51:43.626108 | 8e08af6b-7837-4632-97fb-0e34002a082a ==============================
+[0m22:51:43.626108 [info ] [MainThread]: Running with dbt=1.9.8
+[0m22:51:43.627013 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/jean-baptistepinet/.dbt', 'log_path': '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:51:43.671306 [info ] [MainThread]: dbt version: 1.9.8
+[0m22:51:43.671905 [info ] [MainThread]: python version: 3.9.6
+[0m22:51:43.672352 [info ] [MainThread]: python path: /Library/Developer/CommandLineTools/usr/bin/python3
+[0m22:51:43.672787 [info ] [MainThread]: os info: macOS-12.7.4-x86_64-i386-64bit
+[0m22:52:01.840945 [info ] [MainThread]: Using profiles dir at /Users/jean-baptistepinet/.dbt
+[0m22:52:01.842511 [info ] [MainThread]: Using profiles.yml file at /Users/jean-baptistepinet/.dbt/profiles.yml
+[0m22:52:01.843426 [info ] [MainThread]: Using dbt_project.yml file at /Users/jean-baptistepinet/Documents/Portfolio/HexAssur/dbt/dbt_project.yml
+[0m22:52:01.844025 [info ] [MainThread]: adapter type: bigquery
+[0m22:52:01.844462 [info ] [MainThread]: adapter version: 1.9.2
+[0m22:52:01.991351 [info ] [MainThread]: Configuration:
+[0m22:52:01.991906 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:52:01.992308 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:52:01.992687 [info ] [MainThread]: Required dependencies:
+[0m22:52:01.993169 [debug] [MainThread]: Executing "git --help"
+[0m22:52:02.136130 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:52:02.139454 [debug] [MainThread]: STDERR: "b''"
+[0m22:52:02.140426 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:52:02.141165 [info ] [MainThread]: Connection:
+[0m22:52:02.142174 [info ] [MainThread]:   method: service-account
+[0m22:52:02.142655 [info ] [MainThread]:   database: hexassur
+[0m22:52:02.143264 [info ] [MainThread]:   execution_project: hexassur
+[0m22:52:02.143854 [info ] [MainThread]:   schema: dbt
+[0m22:52:02.144437 [info ] [MainThread]:   location: EU
+[0m22:52:02.145207 [info ] [MainThread]:   priority: interactive
+[0m22:52:02.145794 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m22:52:02.146325 [info ] [MainThread]:   impersonate_service_account: None
+[0m22:52:02.146836 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m22:52:02.147499 [info ] [MainThread]:   job_retries: 1
+[0m22:52:02.147933 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m22:52:02.148667 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m22:52:02.149244 [info ] [MainThread]:   timeout_seconds: 300
+[0m22:52:02.149647 [info ] [MainThread]:   client_id: None
+[0m22:52:02.150072 [info ] [MainThread]:   token_uri: None
+[0m22:52:02.150937 [info ] [MainThread]:   compute_region: None
+[0m22:52:02.151376 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m22:52:02.151769 [info ] [MainThread]:   gcs_bucket: None
+[0m22:52:02.152144 [info ] [MainThread]:   dataproc_batch: None
+[0m22:52:02.153215 [info ] [MainThread]: Registered adapter: bigquery=1.9.2
+[0m22:52:02.562990 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m22:52:02.564008 [debug] [MainThread]: On debug: select 1 as id
+[0m22:52:02.564770 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:52:02.565448 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 2] No such file or directory: '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/hexassur-4ea302855c88.json''
+[0m22:52:02.565970 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m22:52:02.566419 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 2] No such file or directory: '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/hexassur-4ea302855c88.json'
+[0m22:52:02.566907 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m22:52:02.567510 [info ] [MainThread]: [31m1 check failed:[0m
+[0m22:52:02.568057 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m22:52:02.593282 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 19.11048, "process_in_blocks": "0", "process_kernel_time": 1.870764, "process_mem_max_rss": "324751360", "process_out_blocks": "0", "process_user_time": 6.549498}
+[0m22:52:02.594003 [debug] [MainThread]: Command `dbt debug` failed at 22:52:02.593850 after 19.11 seconds
+[0m22:52:02.594554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111bf0100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ba1f790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ba1f760>]}
+[0m22:52:02.595093 [debug] [MainThread]: Flushing usage events
+[0m22:52:03.143434 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:06:53.330095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c4dfcf050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c4f322dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c4e3ce910>]}
+
+
+============================== 21:06:53.340893 | 7212a504-0e7e-4107-8b8b-fa9f8607fd0f ==============================
+[0m21:06:53.340893 [info ] [MainThread]: Running with dbt=1.7.19
+[0m21:06:53.342322 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt/.dbt_profiles/', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:06:53.343877 [info ] [MainThread]: dbt version: 1.7.19
+[0m21:06:53.345127 [info ] [MainThread]: python version: 3.11.8
+[0m21:06:53.346933 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m21:06:53.348324 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-x86_64-with-glibc2.36
+[0m21:06:55.814314 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt/.dbt_profiles/
+[0m21:06:55.816108 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/.dbt_profiles/profiles.yml
+[0m21:06:55.817171 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m21:06:55.819388 [info ] [MainThread]: adapter type: bigquery
+[0m21:06:55.821079 [info ] [MainThread]: adapter version: 1.7.5
+[0m21:06:55.995177 [info ] [MainThread]: Configuration:
+[0m21:06:55.996357 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:06:55.998022 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:06:55.999322 [info ] [MainThread]: Required dependencies:
+[0m21:06:56.001032 [debug] [MainThread]: Executing "git --help"
+[0m21:06:56.025292 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:06:56.027028 [info ] [MainThread]: Connection:
+[0m21:06:56.029108 [info ] [MainThread]:   method: service-account
+[0m21:06:56.035283 [info ] [MainThread]:   database: hexassur
+[0m21:06:56.036435 [info ] [MainThread]:   execution_project: hexassur
+[0m21:06:56.037893 [info ] [MainThread]:   schema: dbt
+[0m21:06:56.039197 [info ] [MainThread]:   location: EU
+[0m21:06:56.040711 [info ] [MainThread]:   priority: interactive
+[0m21:06:56.042049 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m21:06:56.043184 [info ] [MainThread]:   impersonate_service_account: None
+[0m21:06:56.044347 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m21:06:56.046218 [info ] [MainThread]:   job_retries: 1
+[0m21:06:56.048517 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m21:06:56.049605 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m21:06:56.051519 [info ] [MainThread]:   keyfile: ./hexassur-4ea302855c88.json
+[0m21:06:56.052793 [info ] [MainThread]:   timeout_seconds: 300
+[0m21:06:56.054246 [info ] [MainThread]:   client_id: None
+[0m21:06:56.055330 [info ] [MainThread]:   token_uri: None
+[0m21:06:56.056582 [info ] [MainThread]:   dataproc_region: None
+[0m21:06:56.058004 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m21:06:56.059079 [info ] [MainThread]:   gcs_bucket: None
+[0m21:06:56.060400 [info ] [MainThread]:   dataproc_batch: None
+[0m21:06:56.061616 [info ] [MainThread]: Registered adapter: bigquery=1.7.5
+[0m21:06:56.063835 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m21:06:56.065017 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:06:56.066326 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: './hexassur-4ea302855c88.json''
+[0m21:06:56.067408 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:06:56.069385 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m21:06:56.070912 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m21:06:56.072865 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: './hexassur-4ea302855c88.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:06:56.076579 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.8170278, "process_user_time": 4.304625, "process_kernel_time": 0.804623, "process_mem_max_rss": "205764", "process_in_blocks": "215400", "process_out_blocks": "9", "command_success": false}
+[0m21:06:56.077837 [debug] [MainThread]: Command `dbt debug` failed at 21:06:56.077587 after 2.82 seconds
+[0m21:06:56.078737 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:06:56.079602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c4df96ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c4dfe4650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c4dfe4b50>]}
+[0m21:06:56.080579 [debug] [MainThread]: Flushing usage events
+[0m21:13:57.986020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec402dd090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec40007b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec40005790>]}
+
+
+============================== 21:13:57.996121 | 8ada4aef-ef5f-4368-931f-0be361158303 ==============================
+[0m21:13:57.996121 [info ] [MainThread]: Running with dbt=1.7.19
+[0m21:13:57.997845 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt/.dbt_profiles/', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:13:57.999301 [info ] [MainThread]: dbt version: 1.7.19
+[0m21:13:58.000592 [info ] [MainThread]: python version: 3.11.8
+[0m21:13:58.002087 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m21:13:58.003531 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-x86_64-with-glibc2.36
+[0m21:14:00.163947 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt/.dbt_profiles/
+[0m21:14:00.165545 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/.dbt_profiles/profiles.yml
+[0m21:14:00.166666 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m21:14:00.168829 [info ] [MainThread]: adapter type: bigquery
+[0m21:14:00.170282 [info ] [MainThread]: adapter version: 1.7.5
+[0m21:14:00.335080 [info ] [MainThread]: Configuration:
+[0m21:14:00.336613 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:14:00.337868 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:14:00.339089 [info ] [MainThread]: Required dependencies:
+[0m21:14:00.340214 [debug] [MainThread]: Executing "git --help"
+[0m21:14:00.342579 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:14:00.343864 [info ] [MainThread]: Connection:
+[0m21:14:00.345846 [info ] [MainThread]:   method: service-account
+[0m21:14:00.347019 [info ] [MainThread]:   database: hexassur
+[0m21:14:00.348632 [info ] [MainThread]:   execution_project: hexassur
+[0m21:14:00.349859 [info ] [MainThread]:   schema: dbt
+[0m21:14:00.350813 [info ] [MainThread]:   location: EU
+[0m21:14:00.351765 [info ] [MainThread]:   priority: interactive
+[0m21:14:00.353011 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m21:14:00.354053 [info ] [MainThread]:   impersonate_service_account: None
+[0m21:14:00.355412 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m21:14:00.356570 [info ] [MainThread]:   job_retries: 1
+[0m21:14:00.357798 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m21:14:00.359067 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m21:14:00.360431 [info ] [MainThread]:   keyfile: hexassur-4ea302855c88.json
+[0m21:14:00.361875 [info ] [MainThread]:   timeout_seconds: 300
+[0m21:14:00.363099 [info ] [MainThread]:   client_id: None
+[0m21:14:00.364289 [info ] [MainThread]:   token_uri: None
+[0m21:14:00.365577 [info ] [MainThread]:   dataproc_region: None
+[0m21:14:00.366787 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m21:14:00.367874 [info ] [MainThread]:   gcs_bucket: None
+[0m21:14:00.369293 [info ] [MainThread]:   dataproc_batch: None
+[0m21:14:00.370984 [info ] [MainThread]: Registered adapter: bigquery=1.7.5
+[0m21:14:00.373760 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m21:14:00.374679 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:14:00.375861 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: 'hexassur-4ea302855c88.json''
+[0m21:14:00.376813 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:14:00.377941 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m21:14:00.379491 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m21:14:00.381002 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: 'hexassur-4ea302855c88.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:14:00.386799 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.466561, "process_user_time": 4.37064, "process_kernel_time": 1.142185, "process_mem_max_rss": "204044", "process_in_blocks": "160904", "process_out_blocks": "9", "command_success": false}
+[0m21:14:00.400928 [debug] [MainThread]: Command `dbt debug` failed at 21:14:00.400611 after 2.48 seconds
+[0m21:14:00.402951 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:14:00.404002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec400404d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec402dd090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fec446cfed0>]}
+[0m21:14:00.405308 [debug] [MainThread]: Flushing usage events
+[0m21:21:01.808622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c648949d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c64894310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c64894590>]}
+
+
+============================== 21:21:01.826326 | bf34b0ee-a936-474d-a0ef-2eeee832c4e6 ==============================
+[0m21:21:01.826326 [info ] [MainThread]: Running with dbt=1.7.19
+[0m21:21:01.828099 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt/.dbt_profiles/', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m21:21:01.829749 [info ] [MainThread]: dbt version: 1.7.19
+[0m21:21:01.830933 [info ] [MainThread]: python version: 3.11.8
+[0m21:21:01.832524 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m21:21:01.834487 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-x86_64-with-glibc2.36
+[0m21:21:04.248597 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt/.dbt_profiles/
+[0m21:21:04.249795 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/.dbt_profiles/profiles.yml
+[0m21:21:04.251272 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m21:21:04.253603 [info ] [MainThread]: adapter type: bigquery
+[0m21:21:04.254845 [info ] [MainThread]: adapter version: 1.7.5
+[0m21:21:04.438587 [info ] [MainThread]: Configuration:
+[0m21:21:04.439716 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:21:04.441060 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:21:04.442100 [info ] [MainThread]: Required dependencies:
+[0m21:21:04.443877 [debug] [MainThread]: Executing "git --help"
+[0m21:21:04.445829 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:21:04.446919 [info ] [MainThread]: Connection:
+[0m21:21:04.447995 [info ] [MainThread]:   method: service-account
+[0m21:21:04.449312 [info ] [MainThread]:   database: hexassur
+[0m21:21:04.450485 [info ] [MainThread]:   execution_project: hexassur
+[0m21:21:04.451595 [info ] [MainThread]:   schema: dbt
+[0m21:21:04.452653 [info ] [MainThread]:   location: EU
+[0m21:21:04.453833 [info ] [MainThread]:   priority: interactive
+[0m21:21:04.455104 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m21:21:04.456587 [info ] [MainThread]:   impersonate_service_account: None
+[0m21:21:04.458069 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m21:21:04.459159 [info ] [MainThread]:   job_retries: 1
+[0m21:21:04.460352 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m21:21:04.461447 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m21:21:04.462637 [info ] [MainThread]:   keyfile: /Users/jean-baptistepinet/Documents/Portfolio/HexAssur/dbt/.dbt_profiles/hexassur-4ea302855c88.json
+[0m21:21:04.464157 [info ] [MainThread]:   timeout_seconds: 300
+[0m21:21:04.477899 [info ] [MainThread]:   client_id: None
+[0m21:21:04.479339 [info ] [MainThread]:   token_uri: None
+[0m21:21:04.480767 [info ] [MainThread]:   dataproc_region: None
+[0m21:21:04.481880 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m21:21:04.483383 [info ] [MainThread]:   gcs_bucket: None
+[0m21:21:04.484744 [info ] [MainThread]:   dataproc_batch: None
+[0m21:21:04.486364 [info ] [MainThread]: Registered adapter: bigquery=1.7.5
+[0m21:21:04.488513 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m21:21:04.489602 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:21:04.508505 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/dbt/.dbt_profiles/hexassur-4ea302855c88.json''
+[0m21:21:04.509836 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m21:21:04.511279 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m21:21:04.513818 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m21:21:04.516002 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: '/Users/jean-baptistepinet/Documents/Portfolio/HexAssur/dbt/.dbt_profiles/hexassur-4ea302855c88.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m21:21:04.520774 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 2.7852552, "process_user_time": 4.440547, "process_kernel_time": 1.209189, "process_mem_max_rss": "203564", "process_in_blocks": "149016", "process_out_blocks": "10", "command_success": false}
+[0m21:21:04.522223 [debug] [MainThread]: Command `dbt debug` failed at 21:21:04.522006 after 2.79 seconds
+[0m21:21:04.523254 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:21:04.524213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c648b8410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c64896b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c5095b9d0>]}
+[0m21:21:04.525307 [debug] [MainThread]: Flushing usage events
+[0m21:22:29.962988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd26a988d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd26a98290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd26ec64d0>]}
+
+
+============================== 21:22:29.971882 | 70e79e74-4f26-4afa-b899-d05bd100a84e ==============================
+[0m21:22:29.971882 [info ] [MainThread]: Running with dbt=1.7.19
+[0m21:22:29.973870 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug --profiles-dir /opt/airflow/dbt/.dbt_profiles/', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:22:29.975180 [info ] [MainThread]: dbt version: 1.7.19
+[0m21:22:29.976133 [info ] [MainThread]: python version: 3.11.8
+[0m21:22:29.977690 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m21:22:29.979395 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-x86_64-with-glibc2.36
+[0m21:22:31.792865 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt/.dbt_profiles/
+[0m21:22:31.793794 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt/.dbt_profiles/profiles.yml
+[0m21:22:31.794694 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt/dbt_project.yml
+[0m21:22:31.796081 [info ] [MainThread]: adapter type: bigquery
+[0m21:22:31.797229 [info ] [MainThread]: adapter version: 1.7.5
+[0m21:22:31.975707 [info ] [MainThread]: Configuration:
+[0m21:22:31.982837 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:22:31.984205 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:22:31.985649 [info ] [MainThread]: Required dependencies:
+[0m21:22:31.987506 [debug] [MainThread]: Executing "git --help"
+[0m21:22:31.989871 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m21:22:31.991122 [info ] [MainThread]: Connection:
+[0m21:22:31.992754 [info ] [MainThread]:   method: service-account
+[0m21:22:31.994129 [info ] [MainThread]:   database: hexassur
+[0m21:22:31.995603 [info ] [MainThread]:   execution_project: hexassur
+[0m21:22:31.996708 [info ] [MainThread]:   schema: dbt
+[0m21:22:31.997945 [info ] [MainThread]:   location: EU
+[0m21:22:31.999521 [info ] [MainThread]:   priority: interactive
+[0m21:22:32.000758 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m21:22:32.002015 [info ] [MainThread]:   impersonate_service_account: None
+[0m21:22:32.003228 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m21:22:32.004875 [info ] [MainThread]:   job_retries: 1
+[0m21:22:32.006059 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m21:22:32.007541 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m21:22:32.008773 [info ] [MainThread]:   keyfile: /opt/airflow/dbt/.dbt_profiles/hexassur-4ea302855c88.json
+[0m21:22:32.009991 [info ] [MainThread]:   timeout_seconds: 300
+[0m21:22:32.011430 [info ] [MainThread]:   client_id: None
+[0m21:22:32.012900 [info ] [MainThread]:   token_uri: None
+[0m21:22:32.014171 [info ] [MainThread]:   dataproc_region: None
+[0m21:22:32.016279 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m21:22:32.018153 [info ] [MainThread]:   gcs_bucket: None
+[0m21:22:32.020174 [info ] [MainThread]:   dataproc_batch: None
+[0m21:22:32.022811 [info ] [MainThread]: Registered adapter: bigquery=1.7.5
+[0m21:22:32.024838 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m21:22:32.025799 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:22:32.116826 [debug] [MainThread]: On debug: select 1 as id
+[0m21:22:36.039189 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=hexassur&j=bq:EU:74a34fde-5434-4552-9edb-681c8ee91602&page=queryresults
+[0m21:22:36.475123 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:22:36.477017 [info ] [MainThread]: [31m1 check failed:[0m
+[0m21:22:36.478959 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m21:22:36.481522 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 6.577925, "process_user_time": 4.28554, "process_kernel_time": 1.203803, "process_mem_max_rss": "208428", "process_in_blocks": "45968", "process_out_blocks": "9", "command_success": false}
+[0m21:22:36.482900 [debug] [MainThread]: Command `dbt debug` failed at 21:22:36.482558 after 6.58 seconds
+[0m21:22:36.483987 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:22:36.485146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd2705c950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd2119bbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd26ae8a10>]}
+[0m21:22:36.486263 [debug] [MainThread]: Flushing usage events
+[0m19:29:53.188302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2169948d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f21698ee890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2169ec9490>]}
+
+
+============================== 19:29:53.214430 | 3cec2f7c-1afc-483f-9ce4-d59738f98bbf ==============================
+[0m19:29:53.214430 [info ] [MainThread]: Running with dbt=1.7.19
+[0m19:29:53.221169 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:29:53.802793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3cec2f7c-1afc-483f-9ce4-d59738f98bbf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f21694dca50>]}
+[0m19:29:53.808034 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m19:29:53.811836 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m19:29:53.816734 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.93652815, "process_user_time": 3.629463, "process_kernel_time": 0.756463, "process_mem_max_rss": "105016", "process_in_blocks": "92256", "process_out_blocks": "3"}
+[0m19:29:53.818272 [debug] [MainThread]: Command `dbt deps` succeeded at 19:29:53.817961 after 0.94 seconds
+[0m19:29:53.819633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f216dd54290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f216dd094d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2169948ed0>]}
+[0m19:29:53.820784 [debug] [MainThread]: Flushing usage events
+[0m19:30:24.504878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4095575c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f409597e4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4095568450>]}
+
+
+============================== 19:30:24.515763 | 49e4d170-6640-40d9-bb63-dae9e7473b6b ==============================
+[0m19:30:24.515763 [info ] [MainThread]: Running with dbt=1.7.19
+[0m19:30:24.517593 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt/logs', 'debug': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:30:24.818803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '49e4d170-6640-40d9-bb63-dae9e7473b6b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4095595250>]}
+[0m19:30:24.823423 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-bwgiymef'
+[0m19:30:24.824515 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:30:24.967798 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:30:24.971573 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:30:25.091023 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:30:25.102729 [error] [MainThread]: Encountered an error:
+Package dbt-labs/dbt_expectations was not found in the package index
+[0m19:30:25.109696 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.67365, "process_user_time": 3.177851, "process_kernel_time": 0.41616, "process_mem_max_rss": "106156", "process_in_blocks": "62440", "process_out_blocks": "12", "command_success": false}
+[0m19:30:25.113201 [debug] [MainThread]: Command `dbt deps` failed at 19:30:25.112808 after 0.68 seconds
+[0m19:30:25.114326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4099f09c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4095854e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4099c47f50>]}
+[0m19:30:25.115385 [debug] [MainThread]: Flushing usage events
+[0m19:33:05.324494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d9fdfcb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d9fe16a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d9fe16610>]}
+
+
+============================== 19:33:05.351854 | cdac2844-c571-497e-b14e-bcf38462ecf4 ==============================
+[0m19:33:05.351854 [info ] [MainThread]: Running with dbt=1.7.19
+[0m19:33:05.353790 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m19:33:05.571038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cdac2844-c571-497e-b14e-bcf38462ecf4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d9fdd7510>]}
+[0m19:33:05.574472 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-4dk9r66f'
+[0m19:33:05.578962 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:33:05.726638 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:33:05.731499 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:33:05.827132 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:33:05.838742 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m19:33:05.937509 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m19:33:05.949459 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m19:33:06.169243 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m19:33:06.175419 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m19:33:06.273919 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m19:33:06.285747 [error] [MainThread]: Encountered an error:
+Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=0.8.0', '>=0.9.0', '<2.0.0']
+[0m19:33:06.291248 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 1.058881, "process_user_time": 3.520061, "process_kernel_time": 1.295846, "process_mem_max_rss": "106692", "process_in_blocks": "2552", "process_out_blocks": "14", "command_success": false}
+[0m19:33:06.292955 [debug] [MainThread]: Command `dbt deps` failed at 19:33:06.292730 after 1.06 seconds
+[0m19:33:06.293945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d9fdc99d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d9fdcaa50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d9fe5d390>]}
+[0m19:33:06.294958 [debug] [MainThread]: Flushing usage events
+[0m19:33:41.195027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072ec09710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072ec08350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072feec610>]}
+
+
+============================== 19:33:41.203027 | ae40610b-6fb7-4e97-917e-b8fbf39cd99f ==============================
+[0m19:33:41.203027 [info ] [MainThread]: Running with dbt=1.7.19
+[0m19:33:41.204963 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt/.dbt_profiles/', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:33:41.490002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ae40610b-6fb7-4e97-917e-b8fbf39cd99f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072ec34650>]}
+[0m19:33:41.497895 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-37vi7o89'
+[0m19:33:41.499143 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:33:41.667739 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:33:41.695364 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:33:41.881860 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:33:41.905130 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m19:33:42.093534 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m19:33:42.104781 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m19:33:42.237773 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m19:33:42.247740 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m19:33:42.406674 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m19:33:42.454463 [info ] [MainThread]: Updating lock file in file path: /opt/airflow/dbt/package-lock.yml
+[0m19:33:43.526869 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-y6yrn6pi'
+[0m19:33:43.543778 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m19:33:45.501039 [info ] [MainThread]: Installed from version 1.3.0
+[0m19:33:45.502531 [info ] [MainThread]: Up to date!
+[0m19:33:45.504299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ae40610b-6fb7-4e97-917e-b8fbf39cd99f', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072eb5c5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072ec1e050>]}
+[0m19:33:45.516094 [info ] [MainThread]: Installing metaplane/dbt_expectations
+[0m19:33:47.453225 [info ] [MainThread]: Installed from version 0.10.9
+[0m19:33:47.454830 [info ] [MainThread]: Up to date!
+[0m19:33:47.456717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ae40610b-6fb7-4e97-917e-b8fbf39cd99f', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072eadae90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072eb5c750>]}
+[0m19:33:47.581460 [info ] [MainThread]: Installing dbt-labs/audit_helper
+[0m19:33:48.761822 [info ] [MainThread]: Installed from version 0.12.1
+[0m19:33:48.763801 [info ] [MainThread]: Up to date!
+[0m19:33:48.779968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ae40610b-6fb7-4e97-917e-b8fbf39cd99f', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072eb53910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072eb61190>]}
+[0m19:33:48.782344 [info ] [MainThread]: Installing godatadriven/dbt_date
+[0m19:33:49.551965 [info ] [MainThread]: Installed from version 0.14.2
+[0m19:33:49.555262 [info ] [MainThread]: Up to date!
+[0m19:33:49.557411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'ae40610b-6fb7-4e97-917e-b8fbf39cd99f', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072eb82350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072eb825d0>]}
+[0m19:33:49.563273 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 8.529078, "process_user_time": 6.667035, "process_kernel_time": 1.87585, "process_mem_max_rss": "116248", "process_in_blocks": "656", "process_out_blocks": "21109"}
+[0m19:33:49.584625 [debug] [MainThread]: Command `dbt deps` succeeded at 19:33:49.583544 after 8.55 seconds
+[0m19:33:49.585953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f073345f190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0733425510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07332f1b10>]}
+[0m19:33:49.587214 [debug] [MainThread]: Flushing usage events

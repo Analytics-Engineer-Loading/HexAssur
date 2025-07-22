@@ -4,7 +4,7 @@ hexassur:
       dataset: dbt
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: ./hexassur-4ea302855c88.json
+      keyfile: /opt/airflow/dbt/.dbt_profiles/hexassur-4ea302855c88.json
       location: EU
       method: service-account
       priority: interactive
