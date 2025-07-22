@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: hexassur
+    database: hexassur
+    schema: raw
+    tables:
+      - name: clients
+        description: "Table contenant les informations des clients"
+      - name: contrats
+        description: "Table contenant les contrats d'assurance souscrits par les clients"
+      - name: paiements
+        description: "Table contenant les paiements effectués par les clients"
+      - name: sinistres
+        description: "Table contenant les sinistres déclarés par les clients"
